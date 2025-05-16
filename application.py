@@ -1,11 +1,12 @@
 from flask import Flask, request, render_template
+from src import page_menu
 
 application = Flask(__name__)
 
 
 @application.route("/<table_num>")
 def page_menu(table_num):
-  return render_template('./src/page_menu.html', table_number=table_num)
+  return page_menu.page_menu(table_num)
 
 
 @application.route("/payment", method=['POST'])
