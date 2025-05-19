@@ -18,9 +18,10 @@ def page_menu(table_num):
   template = '''
   <html>
     <head>
-      <p>'''+table_num+'''번 테이블 주문</p><br><br><br>
+      <title>메뉴 선택 페이지</title>
     </head>
     <body>
+      <p><h2 class="main-title">'''+table_num+'''번 테이블 주문</h2></p><br><br><br>
       <form action="/payment" method="post">
         '''+template_menu()+'''<br>
         <input tpye="hidden" name="table_num" value="'''+table_num+'''">
