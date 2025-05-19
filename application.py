@@ -15,6 +15,10 @@ spreadsheet = client.open_by_key('1871ZjkgBWblqwsxkTxWSDqGy73M18Z27Qx9LPM_AIF0')
 ws_menu = spreadsheet.worksheet('menu_available')
 ws_order = spreadsheet.worksheet('order_contents')
 
+@application.route("/")
+def page_route():
+  return 'hello'
+
 
 @application.route("/payment", method=['POST'])
 def page_payment():
