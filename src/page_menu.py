@@ -1,7 +1,7 @@
 import gspread
 
 
-def page_menu(table_num):
+def page_men(table_num):
   
   return "hello"
 
