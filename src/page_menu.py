@@ -22,7 +22,7 @@ def page_menu(table_num):
     </head>
     <body>
       <form action="/payment" method="post">
-        '''+template_menu()+'''
+        '''+template_menu()+'''<br>
         <input tpye="hidden" name="table_num" value="'''+table_num+'''">
         <input type="submit" value="결제">
       </form>
