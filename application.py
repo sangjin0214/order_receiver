@@ -25,7 +25,7 @@ def page_route():
   return str(ws_menu.get('A1:G1'))
 
 
-@application.route("/payment", method=['POST'])
+@application.route("/payment")
 def page_payment():
   #order_state = [request.form[menu] for menu in ws_menu.get('A1:G1')+ws_menu.get('A4:H4')]
   #table_num = request.form['table_num']
