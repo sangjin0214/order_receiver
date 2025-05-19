@@ -1,5 +1,4 @@
 flask
 uwsgi
-gunicorn
 gspread
 google-auth
