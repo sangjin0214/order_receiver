@@ -2,22 +2,22 @@ from flask import Flask, request, render_template
 #from src import page_menu, page_payment
 import os
 import json
-from google.oauth2.service_account import Credentials
+from oauth2client.service_account import ServiceAccountCredentials
 import gspread
+
 
 application = Flask(__name__)
 
+
+SCOPES = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']
+
 key_json_string = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS_JSON')
 credentials_info = json.loads(key_json_string)
-client = gspread.service_account(info=credentials_info)
-'''credentials = Credentials.from_service_account_info(credentials_info)
-client = gspread.authorize(credentials)'''
-spreadsheet = client.open('practice')
-'''
+credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_info, SCOPES)
+client = gspread.authorize(credentials)
 spreadsheet = client.open_by_key('1871ZjkgBWblqwsxkTxWSDqGy73M18Z27Qx9LPM_AIF0')
 ws_menu = spreadsheet.worksheet('menu_available')
 ws_order = spreadsheet.worksheet('order_contents')
-'''
 
 
 @application.route("/")
