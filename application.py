@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from src import page_menu, page_payment
+#from src import page_menu, page_payment
 import os
 import json
 from google.oauth2.service_account import Credentials
@@ -19,7 +19,7 @@ ws_order = spreadsheet.worksheet('order_contents')
 def page_route():
   return 'hello'
 
-
+'''
 @application.route("/payment", method=['POST'])
 def page_payment():
   order_state = [request.form[menu] for menu in ws_menu.get('A1:G1')+ws_menu.get('A4:H4')]
@@ -40,3 +40,4 @@ def page_complete():
 @application.route("/<table_num>")
 def page_menu(table_num):
   return page_menu.page_menu(table_num)
+'''
