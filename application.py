@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from src import page_menu, page_payment, input_order
+from src import page_menu, page_payment
 import os
 import json
 from google.oauth2.service_account import Credentials
@@ -13,6 +13,7 @@ credentials = Credentials.from_service_account_info(credentials_info)
 client = gspread.authorize(credentials)
 spreadsheet = client.open_by_key('1871ZjkgBWblqwsxkTxWSDqGy73M18Z27Qx9LPM_AIF0')
 ws_menu = spreadsheet('menu_available')
+ws_order = spreadsheet('order_contents')
 
 
 @application.route("/payment", method=['POST'])
@@ -28,7 +29,7 @@ def page_complete():
   table_num = request.form['table_num']
   orderer_name = request.form['orderer_name']
   total_price = request.form['total_price']
-  input_order.input_order(table_num, orderer_name, total_price, order_state)
+  ws_order.append_row([table_num, orderer_name, total_price, '', ''] + order_state)
   return render_template('./src/page_complete.html', table=table_num, name=orderer_name)
 
 
