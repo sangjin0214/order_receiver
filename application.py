@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from src import page_menu, page_payment
+#from src import page_menu, page_payment
 import os
 import json
 from oauth2client.service_account import ServiceAccountCredentials
@@ -22,7 +22,7 @@ ws_order = spreadsheet.worksheet('order_contents')
 
 @application.route("/")
 def page_route():
-  return 'hello'
+  return str(ws_menu.get('A1:G1'))
 
 '''
 @application.route("/payment", method=['POST'])
