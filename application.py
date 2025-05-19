@@ -27,7 +27,8 @@ def page_complete():
   order_state = [request.form[menu] for menu in ws_menu.get('A1:G1')+ws_menu.get('A4:H4')]
   table_num = request.form['table_num']
   orderer_name = request.form['orderer_name']
-  input_order.input_order(table_num, orderer_name, order_state)
+  total_price = request.form['total_price']
+  input_order.input_order(table_num, orderer_name, total_price, order_state)
   return render_template('./src/page_complete.html', table=table_num, name=orderer_name)
 
 
