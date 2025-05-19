@@ -1,17 +1,4 @@
-import os
-import json
-from google.oauth2.service_account import Credentials
 import gspread
-
-'''
-SCOPES = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']
-
-key_json_string = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS_JSON')
-credentials_info = json.loads(key_json_string)
-credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_info, SCOPES)
-client = gspread.authorize(credentials)
-spreadsheet = client.open_by_key('1871ZjkgBWblqwsxkTxWSDqGy73M18Z27Qx9LPM_AIF0')
-ws_menu = spreadsheet.worksheet('menu_available')'''
 
 
 def page_menu(table_num):
