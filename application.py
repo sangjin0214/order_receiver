@@ -6,7 +6,7 @@ from google.oauth2.service_account import Credentials
 import gspread
 
 application = Flask(__name__)
-
+'''
 key_json_string = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS_JSON')
 credentials_info = json.loads(key_json_string)
 credentials = Credentials.from_service_account_info(credentials_info)
@@ -14,7 +14,7 @@ client = gspread.authorize(credentials)
 spreadsheet = client.open_by_key('1871ZjkgBWblqwsxkTxWSDqGy73M18Z27Qx9LPM_AIF0')
 ws_menu = spreadsheet.worksheet('menu_available')
 ws_order = spreadsheet.worksheet('order_contents')
-
+'''
 @application.route("/")
 def page_route():
   return 'hello'
