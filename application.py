@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from src import page_menu, page_payment
+from src import page_men, page_payment
 import os
 import json
 from oauth2client.service_account import ServiceAccountCredentials
@@ -44,5 +44,5 @@ def page_complete():
 
 @application.route("/<table_num>")
 def page_menu(table_num):
-  return page_menu.page_menu(table_num)
+  return page_men.page_menu(table_num)
 
