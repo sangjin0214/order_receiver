@@ -9,8 +9,7 @@ credentials_info = json.loads(key_json_string)
 credentials = Credentials.from_service_account_info(credentials_info)
 client = gspread.authorize(credentials)
 spreadsheet = client.open_by_key('1871ZjkgBWblqwsxkTxWSDqGy73M18Z27Qx9LPM_AIF0')
-ws_order = spreadsheet('order_contents')
-ws_menu = spreadsheet('menu_available')
+ws_menu = spreadsheet.worksheet('menu_available')
 
 
 def page_menu(table_num):
