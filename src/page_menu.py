@@ -16,8 +16,6 @@ def page_menu(table_num):
       </form>
     </body>
   </html>'''
-  return template
-
-
+  return str(ws_menu.get('A1:G1'))
 
 
