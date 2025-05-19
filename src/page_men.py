@@ -1,4 +1,4 @@
 def page_menu(table_num):
   
-  return "hello"
+  return table_num
 
