@@ -44,5 +44,5 @@ def page_complete():
 
 @application.route("/<table_num>")
 def page_menu(table_num):
-  return page_menu.page_menu(table_num)
+  return table_num#page_menu.page_menu(table_num)
 
