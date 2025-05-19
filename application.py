@@ -31,8 +31,8 @@ def page_payment():
   #table_num = request.form['table_num']
   return str(ws_menu.get('A1:G1'))#page_payment.page_payment(order_state, table_num)
 
-'''
-@application.route("/payment/order_complete", method=['POST'])
+
+@application.route("/payment/order_complete", methods=['POST'])
 def page_complete():
   order_state = [request.form[menu] for menu in ws_menu.get('A1:G1')+ws_menu.get('A4:H4')]
   table_num = request.form['table_num']
@@ -44,5 +44,5 @@ def page_complete():
 
 @application.route("/<table_num>")
 def page_menu(table_num):
-  return page_menu.page_menu(table_num)'''
+  return page_menu.page_menu(table_num)
 
