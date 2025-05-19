@@ -10,7 +10,7 @@ def page_menu(table_num):
     <body>
       <p><h2 class="main-title">'''+table_num+'''번 테이블 주문</h2></p><br><br><br>
       <form action="/payment" method="post">
-        '''+template_menu()+'''<br>
+        '''+table_num+'''<br>
         <input type="hidden" name="table_num" value="'''+table_num+'''">
         <input type="submit" value="결제">
       </form>
@@ -20,36 +20,4 @@ def page_menu(table_num):
 
 
 
-def template_menu():
-  template = 'Main<br>\n'
-  for menu, available in zip(ws_menu.get('A1:G1'), ws_menu.get('A2:G2')):
-    if int(available):
-      template += '        '+menu+' : <select name="'+menu+'''">
-          <option value="0" selected>0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select><br>\n'''
-    else:
-      template += '        '+menu+' : 품절<input type="hidden" name="'+menu+'" value="0"><br>\n'
-  template += '        <br>Drinks<br>\n'
-  for menu, available in zip(ws_menu.get('A4:H4'), ws_menu.get('A5:H5')):
-    if int(available):
-      template += '        '+menu+' : <select name="'+menu+'''">
-          <option value="0" selected>0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select><br>\n'''
-    else:
-      template += '        '+menu+' : 품절<input type="hidden" name="'+menu+'" value="0"><br>\n'
-  return template  
+
