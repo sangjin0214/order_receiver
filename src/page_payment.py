@@ -24,7 +24,7 @@ def page_payment(order_state, table_num):
 def template_bill(order_state):
   template = '주문 내역'
   sum = 0
-  for menu, amount, price in zip(ws_menu.get('A1:G1')+ws_menu.get('A4:H4'), order_state, ws_menu.get('A3:G3')+ws_menu.get('A6:H6')):
+  for menu, amount, price in zip(ws_menu.get('A1:G1')[0]+ws_menu.get('A4:H4')[0], order_state, ws_menu.get('A3:G3')[0]+ws_menu.get('A6:H6')[0]):
     if int(amount):
       template += '<br>\n        '+menu+'('+price+'\) x '+amount
       sum += int(price) * int(amount)
