@@ -45,5 +45,5 @@ def page_order_complete():
 
 @application.route("/<table_num>")
 def page_menu_select(table_num):
-  return page_menu.page_menu(table_num)
+  return render_template_string(page_menu.page_menu(table_num))
 
