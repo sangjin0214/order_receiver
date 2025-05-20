@@ -17,6 +17,11 @@ def page_menu(table_num):
   <html>
     <head>
       <title>메뉴 선택 페이지</title>
+      <style>
+        body {
+          font-size: 20px;
+        }
+      </style>
     </head>
     <body>
       <img src="{{url_for('static', filename='001.png')}}" alt="메뉴판1" width="100%"><br>
