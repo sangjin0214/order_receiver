@@ -19,7 +19,7 @@ def page_menu(table_num):
       <title>메뉴 선택 페이지</title>
     </head>
     <body>
-      <img src="{{url_for("static", filename="001.png")}}" alt="메뉴판1" width="100%"><br>
+      <img src="{{url_for('static', filename='001.png')}}" alt="메뉴판1" width="100%"><br>
       <img src="{{url_for("static", filename="002.png")}}" alt="메뉴판2" width="100%"><br>
       <img src="{{url_for("static", filename="003.png")}}" alt="메뉴판3" width="100%"><br>
       <img src="{{url_for("static", filename="004.png")}}" alt="메뉴판4" width="100%"><br><br><br>
