@@ -19,10 +19,14 @@ def page_menu(table_num):
       <title>메뉴 선택 페이지</title>
       <style>
         body {
-          font-size: 60px;
+          font-size: 80px;
         }
         select {
-          font-size: 50px;
+          font-size: 80px;
+          width: 130px;
+        }
+        input[type="submit"] {
+          font-size: 70px;
         }
       </style>
     </head>
