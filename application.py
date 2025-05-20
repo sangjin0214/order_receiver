@@ -39,7 +39,7 @@ def page_order_complete():
   orderer_name = request.form['orderer_name']
   total_price = request.form['total_price']
   ws_order.append_row([table_num, orderer_name, total_price, ''] + order_state)
-  return render_template('./src/page_complete.html', table=table_num)
+  return render_template('page_complete.html', table=table_num)
 
 
 @application.route("/<table_num>")
