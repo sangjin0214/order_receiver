@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from src import page_menu, page_payment
+from datetime import datetime
 import os
 import json
 from oauth2client.service_account import ServiceAccountCredentials
@@ -38,7 +39,7 @@ def page_order_complete():
   table_num = request.form['table_num']
   orderer_name = request.form['orderer_name']
   total_price = request.form['total_price']
-  ws_order.append_row([table_num, orderer_name, total_price, ''] + order_state)
+  ws_order.append_row([datetime.now().strftime("%H시 %M분"), table_num, orderer_name, total_price, ''] + order_state)
   return render_template('page_complete.html', table=table_num)
 
 
