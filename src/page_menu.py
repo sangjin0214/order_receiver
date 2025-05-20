@@ -19,7 +19,7 @@ def page_menu(table_num):
       <title>메뉴 선택 페이지</title>
       <style>
         body {
-          font-size: 20px;
+          font-size: 40px;
         }
       </style>
     </head>
