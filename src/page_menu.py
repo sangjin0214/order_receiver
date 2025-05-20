@@ -31,7 +31,7 @@ def page_menu(table_num):
       </form>
     </body>
   </html>'''
-  return render_template_string(template)
+  return template
 
 
 def template_menu():
