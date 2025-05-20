@@ -38,7 +38,7 @@ def template_bill(order_state):
   sum = 0
   for menu, amount, price in zip(ws_menu.get('A1:G1')[0]+ws_menu.get('A4:H4')[0], order_state, ws_menu.get('A3:G3')[0]+ws_menu.get('A6:H6')[0]):
     if int(amount):
-      template += '<br>\n        '+menu+'('+price+'\) x '+amount
+      template += '<br>\n        '+menu+'('+price+'원) x '+amount
       sum += int(price) * int(amount)
     template += '<input type="hidden" name="'+menu+'" value="'+amount+'">'
   template += '<br>\n        Total : '+str(sum)+'원<input type="hidden" name="total_price" value="'+str(sum)+'"><br>'
