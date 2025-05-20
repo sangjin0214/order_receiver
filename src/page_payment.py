@@ -18,6 +18,11 @@ def page_payment(order_state, table_num):
   <html>
     <head>
       <title>결제 페이지</title>
+      <style>
+        body {
+          font-size: 60px;
+        }
+      </style>
     </head>
     <body>
       <p><h2 class="main-title">'''+table_num+'''번 테이블 주문 사항</h2></p><br><a href="/'''+table_num+'''">메뉴 선택 페이지로 돌아가기</a><br><br><br>
