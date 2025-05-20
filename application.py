@@ -26,14 +26,14 @@ def page_route():
 
 
 @application.route("/payment", methods=['POST'])
-def page_payment():
+def page_order_payment():
   order_state = [request.form[menu] for menu in ws_menu.get('A1:G1')+ws_menu.get('A4:H4')]
   table_num = request.form['table_num']
   return page_payment.page_payment(order_state, table_num)
 
 
 @application.route("/payment/order_complete", methods=['POST'])
-def page_complete():
+def page_order_complete():
   order_state = [request.form[menu] for menu in ws_menu.get('A1:G1')+ws_menu.get('A4:H4')]
   table_num = request.form['table_num']
   orderer_name = request.form['orderer_name']
