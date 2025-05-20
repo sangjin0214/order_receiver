@@ -22,6 +22,15 @@ def page_payment(order_state, table_num):
         body {
           font-size: 60px;
         }
+        input[type="text"] {
+          width: 50%;
+          height: 60px;
+        }
+        input[type="submit"] {
+          width: 150px;
+          height: 75px;
+          font-size: 50px;
+        }
       </style>
     </head>
     <body>
