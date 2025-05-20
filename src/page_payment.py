@@ -24,7 +24,9 @@ def page_payment(order_state, table_num):
         }
         input[type="text"] {
           width: 50%;
-          height: 60px;
+          height: 65px;
+          font-size: 60px;
+          vertical-align: middle;
         }
         input[type="submit"] {
           width: 150px;
