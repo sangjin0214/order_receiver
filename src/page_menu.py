@@ -26,6 +26,8 @@ def page_menu(table_num):
           width: 130px;
         }
         input[type="submit"] {
+          width: 200px;
+          height: 100px;
           font-size: 70px;
         }
       </style>
