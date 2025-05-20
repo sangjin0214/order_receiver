@@ -41,5 +41,5 @@ def template_bill(order_state):
       template += '<br>\n        '+menu+'('+price+'원) x '+amount
       sum += int(price) * int(amount)
     template += '<input type="hidden" name="'+menu+'" value="'+amount+'">'
-  template += '<br>\n        Total : '+str(sum)+'원<input type="hidden" name="total_price" value="'+str(sum)+'"><br>'
+  template += '<br>\n        >> Total : '+str(sum)+'원<input type="hidden" name="total_price" value="'+str(sum)+'"><br>'
   return template
