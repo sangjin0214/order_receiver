@@ -33,7 +33,7 @@ def page_menu(table_num):
 
 def template_menu():
   template = 'Main<br>\n'
-  for menu, available in zip(ws_menu.get('A1:G1'), ws_menu.get('A2:G2')):
+  for menu, available in zip(ws_menu.get('A1:G1')[0], ws_menu.get('A2:G2')[0]):
     if int(available):
       template += '        '+menu+' : <select name="'+menu+'''">
           <option value="0" selected>0</option>
@@ -46,7 +46,7 @@ def template_menu():
     else:
       template += '        '+menu+' : 품절<input type="hidden" name="'+menu+'" value="0"><br>\n'
   template += '        <br>Drinks<br>\n'
-  for menu, available in zip(ws_menu.get('A4:H4'), ws_menu.get('A5:H5')):
+  for menu, available in zip(ws_menu.get('A4:H4')[0], ws_menu.get('A5:H5')[0]):
     if int(available):
       template += '        '+menu+' : <select name="'+menu+'''">
           <option value="0" selected>0</option>
