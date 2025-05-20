@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, render_template_string
 from src import page_menu, page_payment
 from datetime import datetime
 import os
