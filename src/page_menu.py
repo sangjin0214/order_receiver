@@ -62,7 +62,7 @@ def template_menu():
         </select><br>\n'''
     else:
       template += '        '+menu+' : 품절<input type="hidden" name="'+menu+'" value="0"><br>\n'
-  template += '        <br>Drinks<br>\n'
+  template += '        <br>Drinks<br>§1인당 칵테일 최소 1잔 주문 필수입니다!§<br>\n'
   for menu, available in zip(ws_menu.get('A4:H4')[0], ws_menu.get('A5:H5')[0]):
     if int(available):
       template += '        '+menu+' : <select name="'+menu+'''">
